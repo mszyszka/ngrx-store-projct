@@ -1,0 +1,10 @@
+<div class="right" *ngIf="pokemons">
+
+  <h3>Pokemons</h3>
+  <ul>
+    <li (click)="delPokemon(i)" *ngFor="let pokemon of pokemons | async; let i = index">
+      <a [href]="pokemon.url" target="_blank">{{ pokemon.name }}</a>
+    </li>
+  </ul>
+
+</div>
